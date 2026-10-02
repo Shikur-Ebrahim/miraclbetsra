@@ -278,6 +278,31 @@
       background: rgba(255,255,255,0.1);
     }
 
+    .cta-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #00C851, #007E33);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 16px 24px;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0, 200, 81, 0.35);
+      transition: all 0.3s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .cta-site:active {
+      transform: scale(0.97);
+    }
+
     /* ===== WHITE SECTIONS ===== */
     .section {
       background: white;
@@ -778,6 +803,9 @@
       <a href="https://t.me/Miraclbet" target="_blank" class="cta-secondary">
         📢 Telegram ይቀላቀሉ · Join Telegram
       </a>
+      <a href="https://miraclbet.com" target="_blank" class="cta-site">
+        🌐 MiraclBet.com — Visit Betting Site
+      </a>
     </div>
   </section>
 
@@ -952,21 +980,21 @@
         </div>
       </a>
 
-      <a href="https://wa.me/14389051590" target="_blank" class="contact-btn btn-whatsapp">
+      <div class="contact-btn btn-whatsapp" onclick="window.open('https://wa.me/14389051590','_blank')">
         <div class="btn-icon">💬</div>
         <div class="btn-text">
-          <span class="btn-label">WhatsApp</span>
+          <span class="btn-label">WhatsApp — ይጻፉ / Message</span>
           <span class="btn-value">+1 (438) 905-1590</span>
         </div>
-      </a>
+      </div>
 
-      <a href="imo://chat?phone=+14389051590" class="contact-btn btn-imo">
+      <div class="contact-btn btn-imo" onclick="window.open('https://www.imo.im/','_blank')">
         <div class="btn-icon">🎥</div>
         <div class="btn-text">
-          <span class="btn-label">IMO</span>
+          <span class="btn-label">IMO — ይደውሉ / Call</span>
           <span class="btn-value">+1 (438) 905-1590</span>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 
