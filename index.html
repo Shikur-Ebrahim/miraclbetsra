@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MiraclBet - Ethiopia's #1 Betting Platform. Join 100 agents and earn big!" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <title>MiraclBet - የኢትዮጵያ ቁጥር 1 ቤቲንግ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #FFD700;
+      --dark-gold: #FFA500;
+      --green: #00C851;
+      --dark: #0d0d1a;
+      --dark2: #1a1a2e;
+      --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --red: #FF4444;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #1a1a2e;
+      max-width: 430px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 50%, #16213e 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.08) 0%, transparent 60%);
+      animation: pulse-bg 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-bg {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    /* Floating particles */
+    .particles {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: float-up linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes float-up {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+      animation: logo-glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes logo-glow {
+      from { box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); }
+      to { box-shadow: 0 4px 25px rgba(255, 215, 0, 0.8); }
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: var(--gold);
+    }
+
+    .live-badge {
+      background: var(--red);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* ===== HERO CONTENT ===== */
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      padding: 30px 24px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ethiopia-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 18px;
+      width: fit-content;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .hero-title .highlight {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,215,0,0.2);
+      border-radius: 14px;
+      padding: 14px 10px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-number {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gold);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 2px;
+      display: block;
+    }
+
+    /* CTA Buttons */
+    .cta-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+      color: var(--dark);
+      font-size: 16px;
+      font-weight: 800;
+      padding: 17px 24px;
+      border-radius: 16px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 12px;
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+      transition: all 0.3s ease;
+      animation: cta-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); transform: scale(1); }
+      50% { box-shadow: 0 8px 40px rgba(255, 215, 0, 0.7); transform: scale(1.02); }
+    }
+
+    .cta-primary:active {
+      transform: scale(0.97);
+    }
+
+    .cta-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 15px 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      text-decoration: none;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .cta-secondary:active {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ===== WHITE SECTIONS ===== */
+    .section {
+      background: white;
+      padding: 32px 20px;
+    }
+
+    .section-dark {
+      background: var(--light-gray);
+      padding: 32px 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark2);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .section-title span {
+      color: var(--dark-gold);
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: #0d0d1a;
+    }
+
+    .step-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 4px;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ===== EARNINGS CARD ===== */
+    .earnings-card {
+      background: linear-gradient(135deg, #0d0d1a, #1a1a2e);
+      border-radius: 20px;
+      padding: 24px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .earnings-card::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      background: rgba(255,215,0,0.08);
+      border-radius: 50%;
+    }
+
+    .earnings-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 4px;
+    }
+
+    .earnings-amount {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+
+    .earnings-birr {
+      font-size: 18px;
+      color: rgba(255,215,0,0.7);
+      margin-bottom: 12px;
+    }
+
+    .earnings-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .commission-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .commission-box {
+      flex: 1;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .commission-pct {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .commission-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 2px;
+    }
+
+    /* ===== FEATURES GRID ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px 14px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark2);
+      margin-bottom: 4px;
+    }
+
+    .feature-desc {
+      font-size: 11px;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section {
+      background: linear-gradient(135deg, #0d0d1a, #1a1a2e);
+      padding: 36px 20px;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .contact-title span { color: var(--gold); }
+
+    .contact-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 17px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .contact-btn:active { transform: scale(0.97); }
+
+    .btn-phone {
+      background: linear-gradient(135deg, #00C851, #007E33);
+      color: white;
+    }
+
+    .btn-telegram {
+      background: linear-gradient(135deg, #0088cc, #006dad);
+      color: white;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+    }
+
+    .btn-imo {
+      background: linear-gradient(135deg, #6c5ce7, #4834d4);
+      color: white;
+    }
+
+    .btn-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .btn-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .btn-label {
+      font-size: 11px;
+      opacity: 0.8;
+      font-weight: 500;
+    }
+
+    .btn-value {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* ===== AGENT SECTION ===== */
+    .agent-section {
+      background: white;
+      padding: 32px 20px;
+    }
+
+    .agent-card {
+      background: linear-gradient(135deg, #fff9e6, #fff3cc);
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .agent-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .agent-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark2);
+      margin-bottom: 8px;
+    }
+
+    .agent-desc {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .spots-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--red);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    .requirement-list {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .requirement-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: #444;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      line-height: 1.5;
+    }
+
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+
+    .req-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0d0d1a;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 16px 0;
+    }
+
+    /* ===== STICKY BOTTOM BAR ===== */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 430px;
+      background: rgba(13, 13, 26, 0.97);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255,215,0,0.2);
+      padding: 12px 16px;
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+    }
+
+    .sticky-call {
+      flex: 1;
+      background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+      color: #0d0d1a;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 13px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .sticky-tg {
+      flex: 1;
+      background: #0088cc;
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 13px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .section-divider {
+      height: 6px;
+      background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+      opacity: 0.3;
+    }
+
+    /* Scroll padding for sticky bar */
+    body { padding-bottom: 70px; }
+
+    /* Responsive for desktop preview */
+    @media (min-width: 430px) {
+      body {
+        box-shadow: 0 0 60px rgba(0,0,0,0.2);
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-wrap">
+        <div class="logo-icon">🎯</div>
+        <div class="logo-text">Miracl<span>Bet</span></div>
+      </div>
+      <div class="live-badge">● LIVE</div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="ethiopia-badge">🇪🇹 ለኢትዮጵያ · For Ethiopia</div>
+
+      <h1 class="hero-title">
+        ትልቁ ዕድል<br />
+        <span class="highlight">አሁን መጣ!</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        MiraclBet.com — ኢትዮጵያ ውስጥ ቁጥር 1 የቤቲንግ ፕላትፎርም። 
+        አሁን ወኪሎች እንፈልጋለን። ትልቅ ኮሚሽን ካሜ!
+      </p>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-number">100</span>
+          <span class="stat-label">Agent Spots</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">55%</span>
+          <span class="stat-label">Commission</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">230$</span>
+          <span class="stat-label">To Start</span>
+        </div>
+      </div>
+
+      <a href="tel:+14389051590" class="cta-primary">
+        🚀 አሁን ጀምር · Start Now
+      </a>
+      <a href="https://t.me/Miraclbet" target="_blank" class="cta-secondary">
+        📢 Telegram ይቀላቀሉ · Join Telegram
+      </a>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section-dark">
+    <h2 class="section-title">እንዴት <span>ይሰራል?</span></h2>
+    <p class="section-sub">How It Works — ቀላል እና ፈጣን</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">ወኪልነትን ያስመዝግቡ · Register as Agent</div>
+          <div class="step-desc">ከ 230$ (45,000 ብር) ጋር ይጀምሩ። ወዲያው ስምምነቱ ይጠናቀቃል።</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">ተጠቃሚዎች ያሰባስቡ · Recruit Users</div>
+          <div class="step-desc">100 ወይም ከዚያ በላይ ተጠቃሚዎች በ 10 ቀናት ውስጥ ያሰባስቡ።</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">ኮሚሽን ያሸንፉ · Earn Commission</div>
+          <div class="step-desc">45/55 ኮሚሽን ስፕሊት — ሙሉ ትርፋችሁ ሙሉ ነው። ሂሳቡ ይሰላልዎ።</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">ወዲያው ይወስዱ · Instant Withdrawal</div>
+          <div class="step-desc">ገንዘቦን ቀጥሎ ወደ ባንክ ወይም ሞባይል ብር ያስተላልፉ።</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== EARNINGS SECTION ===== -->
+  <section class="section">
+    <h2 class="section-title">ምን <span>ያህል ያሸንፋሉ?</span></h2>
+    <p class="section-sub">Earnings Breakdown</p>
+
+    <div class="earnings-card">
+      <div class="earnings-label">📍 የመጀመሪያ ኢንቨስትመንት · Initial Investment</div>
+      <div class="earnings-amount">$230</div>
+      <div class="earnings-birr">≈ 45,000 ብር / Birr</div>
+      <div class="earnings-desc">
+        10 ቀን ውስጥ 100 ተጠቃሚዎች ሲሰበሰቡ፣ ሙሉ ትርፍዎ ይሰላልዎ።<br/>
+        ሁሉም ወኪሎች አሁን ጀምረው በጥሩ ሁኔታ ይሰራሉ።
+      </div>
+
+      <div class="commission-row">
+        <div class="commission-box">
+          <div class="commission-pct">45%</div>
+          <div class="commission-label">Agent Share</div>
+        </div>
+        <div style="display:flex;align-items:center;color:rgba(255,255,255,0.3);font-size:20px;">⇄</div>
+        <div class="commission-box">
+          <div class="commission-pct">55%</div>
+          <div class="commission-label">Platform Share</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="agent-card">
+      <div class="agent-icon">💰</div>
+      <div class="agent-title">ስፍር ቁጥር የሌለው ትርፍ!</div>
+      <div class="agent-desc">
+        ያሰባሰቡት ወኪሎች ቁጥር ሲጨምር ኮሚሽኖ ይጨምራል።
+        ሙሉ ዕድሉ ለእርሶ ነው — MiraclBet ጋር ሙሉ ዕዳ የለም!
+      </div>
+
+      <div class="spots-left">🔥 ቦታ 100 ብቻ ነው ያለን!</div>
+
+      <ul class="requirement-list">
+        <li>
+          <span class="req-icon">✅</span>
+          <span>አንድ ሰው 100 ተጠቃሚዎች ሲሰባሰብ ሙሉ ኮሚሽን ያገኛሉ</span>
+        </li>
+        <li>
+          <span class="req-icon">✅</span>
+          <span>10 ቀናት ውስጥ ዕድሉ ይሰላልዎ — ሙሉ ትርፍ</span>
+        </li>
+        <li>
+          <span class="req-icon">✅</span>
+          <span>45/55 ኮሚሽን ስፕሊት — ፍትሃዊ ነው</span>
+        </li>
+        <li>
+          <span class="req-icon">✅</span>
+          <span>ወዲያው ከ 45,000 ብር ጋር ጀምሩ</span>
+        </li>
+      </ul>
+
+      <a href="tel:+14389051590" class="cta-primary" style="animation:none;">
+        📞 አሁን ይደውሉ · Call Now
+      </a>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section-dark">
+    <h2 class="section-title">ለምን <span>MiraclBet?</span></h2>
+    <p class="section-sub">Why Choose Us</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">ፈጣን ክፍያ</div>
+        <div class="feature-desc">Instant payments to your account</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">አስተማማኝ</div>
+        <div class="feature-desc">Safe & secure platform</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-title">ትልቅ ትርፍ</div>
+        <div class="feature-desc">High commission rates</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <div class="feature-title">ሞባይል ቀላል</div>
+        <div class="feature-desc">Easy mobile experience</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">ቀጥታ ድጋፍ</div>
+        <div class="feature-desc">24/7 agent support</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🇪🇹</div>
+        <div class="feature-title">ለኢትዮጵያ</div>
+        <div class="feature-desc">Built for Ethiopians</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section">
+    <h2 class="contact-title">አሁን <span>ያግኙን</span></h2>
+    <p class="contact-sub">
+      ሁሉም ኢትዮጵያዊ ሰው ዛሬ ይደውል!<br/>
+      Contact us on any platform below
+    </p>
+
+    <div class="contact-buttons">
+      <a href="tel:+14389051590" class="contact-btn btn-phone">
+        <div class="btn-icon">📞</div>
+        <div class="btn-text">
+          <span class="btn-label">Call / Phone</span>
+          <span class="btn-value">+1 (438) 905-1590</span>
+        </div>
+      </a>
+
+      <a href="https://t.me/Miraclbet" target="_blank" class="contact-btn btn-telegram">
+        <div class="btn-icon">✈️</div>
+        <div class="btn-text">
+          <span class="btn-label">Telegram Channel</span>
+          <span class="btn-value">@Miraclbet</span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/14389051590" target="_blank" class="contact-btn btn-whatsapp">
+        <div class="btn-icon">💬</div>
+        <div class="btn-text">
+          <span class="btn-label">WhatsApp</span>
+          <span class="btn-value">+1 (438) 905-1590</span>
+        </div>
+      </a>
+
+      <a href="imo://chat?phone=+14389051590" class="contact-btn btn-imo">
+        <div class="btn-icon">🎥</div>
+        <div class="btn-text">
+          <span class="btn-label">IMO</span>
+          <span class="btn-value">+1 (438) 905-1590</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">Miracl<span>Bet</span>.com</div>
+    <div class="footer-text">
+      Ethiopia's Premier Betting Platform<br/>
+      ኢትዮጵያ ቁጥር 1 ቤቲንግ ፕላትፎርም
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-text">
+      © 2024 MiraclBet.com · All Rights Reserved<br/>
+      Contact: +1 (438) 905-1590 · @Miraclbet
+    </div>
+  </footer>
+
+  <!-- ===== STICKY BOTTOM BAR ===== -->
+  <div class="sticky-bar">
+    <a href="tel:+14389051590" class="sticky-call">
+      📞 ይደውሉ · Call
+    </a>
+    <a href="https://t.me/Miraclbet" target="_blank" class="sticky-tg">
+      ✈️ Telegram
+    </a>
+  </div>
+
+  <!-- ===== PARTICLES JS ===== -->
+  <script>
+    // Generate floating particles
+    const container = document.getElementById('particles');
+    const colors = ['#FFD700', '#FFA500', '#ffffff', '#00C851'];
+
+    for (let i = 0; i < 20; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.width = (Math.random() * 4 + 2) + 'px';
+      p.style.height = p.style.width;
+      p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      p.style.animationDuration = (Math.random() * 6 + 4) + 's';
+      p.style.animationDelay = (Math.random() * 4) + 's';
+      p.style.borderRadius = '50%';
+      container.appendChild(p);
+    }
+
+    // Animate stats counter
+    function animateCounter(el, target, suffix = '') {
+      let current = 0;
+      const step = target / 60;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.floor(current) + suffix;
+      }, 16);
+    }
+
+    // Trigger counter on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const nums = entry.target.querySelectorAll('.stat-number');
+          // Already set correctly in HTML
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stats-row').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
