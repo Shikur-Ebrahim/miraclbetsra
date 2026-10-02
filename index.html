@@ -129,7 +129,7 @@
     }
 
     .logo-text span {
-      color: var(--gold);
+      color: var(--green);
     }
 
     .live-badge {
@@ -714,6 +714,12 @@
       justify-content: center;
       gap: 6px;
       text-decoration: none;
+      animation: fast-blink 1s ease-in-out infinite;
+    }
+
+    @keyframes fast-blink {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+      50% { opacity: 0.8; transform: scale(1.03); box-shadow: 0 0 20px rgba(255, 215, 0, 0.9); }
     }
 
     .sticky-tg {
@@ -800,8 +806,8 @@
       <a href="tel:+14389051590" class="cta-primary">
         🚀 አሁን ጀምር · Start Now
       </a>
-      <a href="https://t.me/Miraclbet" target="_blank" class="cta-secondary">
-        📢 Telegram ይቀላቀሉ · Join Telegram
+      <a href="https://wa.me/14389051590" target="_blank" class="cta-secondary">
+        💬 WhatsApp ይጻፉ · Message on WhatsApp
       </a>
       <a href="https://miraclbet.com" target="_blank" class="cta-site">
         🌐 MiraclBet.com — Visit Betting Site
@@ -973,7 +979,11 @@
       </a>
 
       <a href="https://t.me/Miraclbet" target="_blank" class="contact-btn btn-telegram">
-        <div class="btn-icon">✈️</div>
+        <div class="btn-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.665 4.69837L2.40498 11.7584C0.784976 12.4084 0.794976 13.3084 2.10498 13.7084L6.79498 15.1784L17.655 8.32837C18.165 8.01837 18.635 8.18837 18.245 8.53837L9.45498 16.4784H9.44498L9.45498 16.4884L9.13498 21.2784C9.60498 21.2784 9.81498 21.0584 10.085 20.8084L12.365 18.5884L17.115 22.0984C17.985 22.5784 18.625 22.3284 18.845 21.2984L22.035 6.27837C22.345 5.01837 21.555 4.41837 20.665 4.69837Z" fill="white"/>
+          </svg>
+        </div>
         <div class="btn-text">
           <span class="btn-label">Telegram Channel</span>
           <span class="btn-value">@Miraclbet</span>
@@ -1018,7 +1028,10 @@
       📞 ይደውሉ · Call
     </a>
     <a href="https://t.me/Miraclbet" target="_blank" class="sticky-tg">
-      ✈️ Telegram
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.665 4.69837L2.40498 11.7584C0.784976 12.4084 0.794976 13.3084 2.10498 13.7084L6.79498 15.1784L17.655 8.32837C18.165 8.01837 18.635 8.18837 18.245 8.53837L9.45498 16.4784H9.44498L9.45498 16.4884L9.13498 21.2784C9.60498 21.2784 9.81498 21.0584 10.085 20.8084L12.365 18.5884L17.115 22.0984C17.985 22.5784 18.625 22.3284 18.845 21.2984L22.035 6.27837C22.345 5.01837 21.555 4.41837 20.665 4.69837Z" fill="white"/>
+      </svg>
+      Telegram
     </a>
   </div>
 
